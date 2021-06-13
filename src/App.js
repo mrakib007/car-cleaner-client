@@ -6,11 +6,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import BookingList from './components/Customer/BookingList/BookingList';
+import BookService from './components/Customer/BookService/BookService';
 import DashBoard from './components/DashBoard/DashBoard/DashBoard';
+import Review from './components/Customer/Review/Review';
 import HomePage from './components/HomePage/HomePage/HomePage';
 import NavBar from './components/HomePage/NavBar/NavBar';
 import LogIn from './components/LogIn/LogIn/LogIn';
-
+import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
 export const UserContext = createContext();
 
 function App() {
@@ -29,6 +32,18 @@ function App() {
       </Route>
       <Route path= "/dashBoard">
         <DashBoard></DashBoard>
+      </Route>
+      <Route path="/bookingList">
+        <BookingList></BookingList>
+      </Route>
+      <Route path="/serviceBooking">
+      <BookService></BookService>
+      </Route>
+      <Route path="/review">
+        <Review></Review>
+      </Route>
+      <Route path="/makeAdmin">
+        <AddAdmin></AddAdmin>
       </Route>
       </Switch>
       </Router>

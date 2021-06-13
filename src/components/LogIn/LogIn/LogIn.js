@@ -6,9 +6,9 @@ import LogInBg from '../../../images/LogIn.jpg';
 import { Button } from 'react-bootstrap';
 
 
-// if(firebase.apps.length === 0){
-//     firebase.initializeApp(firebaseConfig);
-// }
+if(firebase.apps.length === 0){
+    firebase.initializeApp(firebaseConfig);
+}
 const LogIn = () => {
 
 

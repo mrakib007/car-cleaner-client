@@ -13,22 +13,32 @@ const SideBar = () => {
                     <Link to= '/'><span>Home</span></Link>
                 </li>
                 <li>
-                    <Link to= '/booking'><span>Booking List</span></Link>
+                    <Link to= '/bookingList'><span>Booking List</span></Link>
                 </li>
                 <li>
-                    <Link to= '/manage'><span>Manage Service</span></Link>
+                    <Link to= '/serviceBooking'><span>Book Service</span></Link>
+                </li>
+                {/* <li>
+                    <Link to= '/showBooking'><span>Show Bookings</span></Link>
+                </li> */}
+                <li>
+                    <Link to= '/review'><span>Review</span></Link>
+                </li>
+
+                <li>
+                <Link to= '/orderList'><span>Order List</span></Link>
+                </li>
+                <li>
+                    <Link to= '/addService'><span>Add Service</span></Link>
                 </li>
                 <li>
                     <Link to= '/makeAdmin'><span>Make Admin</span></Link>
                 </li>
                 <li>
-                    <Link to= '/serviceBooking'><span>Book Service</span></Link>
+                <Link to= '/manageService'><span>Manage Service</span></Link>
                 </li>
                 <li>
-                    <Link to= '/showBooking'><span>Show Bookings</span></Link>
-                </li>
-                <li>
-                    <Link to= '/review'><span>Review</span></Link>
+                <Link to= '/manageReviews'><span>Manage Reviews</span></Link>
                 </li>
             </ul>
         </div>
