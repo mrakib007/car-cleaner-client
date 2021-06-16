@@ -13,7 +13,16 @@ const AddAdmin = () => {
       email: data.email,
       name: data.name,
     };
-    fetch("");
+    fetch("http://localhost:5000/addAdmin",{
+      method : 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(adminData),
+    }).then((res)=>{
+      console.log(res);
+      alert('New Admin Added');
+    });
   };
 
   return (
@@ -47,6 +56,10 @@ const AddAdmin = () => {
                   className="form-control"
                   placeholder="Admin's Name"
                 />
+
+                {errors.name && (
+                  <span className="text-danger">This field is required</span>
+                )}
                 <br></br>
               </div>
               <button className="btn btn-primary" type="submit">

@@ -14,6 +14,7 @@ import HomePage from './components/HomePage/HomePage/HomePage';
 import NavBar from './components/HomePage/NavBar/NavBar';
 import LogIn from './components/LogIn/LogIn/LogIn';
 import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
+import AddService from './components/Admin/AddService/AddService';
 export const UserContext = createContext();
 
 function App() {
@@ -44,6 +45,9 @@ function App() {
       </Route>
       <Route path="/makeAdmin">
         <AddAdmin></AddAdmin>
+      </Route>
+      <Route path="/addService">
+        <AddService></AddService>
       </Route>
       </Switch>
       </Router>

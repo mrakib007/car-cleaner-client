@@ -4,17 +4,28 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import LogInBg from '../../../images/LogIn.jpg';
 import { Button } from 'react-bootstrap';
+import { useHistory, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 
 if(firebase.apps.length === 0){
     firebase.initializeApp(firebaseConfig);
 }
+
 const LogIn = () => {
+    let history = useHistory();
+    let location = useLocation();
 
-
+    let {from} = location.state ||  {from : {pathname: "/" }};
+    
+    const [user, setUser] = useState({
+        isSigne
+    })
     const handleGoogleSignIn = () => {
 
     }
+
+    var provider = new firebase.auth.GoogleAuthProvider();
 
     return (
         <div className = "container">
