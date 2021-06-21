@@ -1,8 +1,11 @@
 import React from "react";
-import { Nav, Navbar } from "react-bootstrap";
+import { useContext } from "react";
+import { Button, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../../App";
 
 const NavBar = () => {
+  const [loggedInUser,setLoggedInUser] = useContext(UserContext);
   return (
     <div>
       <Navbar bg="" className="container-fluid" expand="lg">
@@ -14,8 +17,19 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/" className = "pr-3">Home</Nav.Link>
             <Nav.Link as={Link} to="/login" >Log In</Nav.Link>
             <Nav.Link as={Link} to="/dashBoard">Dashboard</Nav.Link>
-            <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+
+            {
+                loggedInUser ? (
+                  <Button variant="warning" onClick={()=> setLoggedInUser(false)}>
+                    Sign Out
+                  </Button>
+                ) : (
+                  <Nav.Link as={Link} to='/login'>
+                    Login
+                  </Nav.Link>
+                )
+              }
           </Nav>
         </Navbar.Collapse>
         </div>

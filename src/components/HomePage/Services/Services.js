@@ -1,9 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import Service1 from "../../../images/service1.jpg";
-import Service2 from "../../../images/service2.jpg";
-import Service3 from "../../../images/service3.jpg";
 import ServiceDetail from "../ServiceDetail/ServiceDetail";
 
 const Services = () => {
