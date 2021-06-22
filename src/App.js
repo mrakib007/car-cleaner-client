@@ -10,6 +10,7 @@ import NavBar from "./components/HomePage/NavBar/NavBar";
 import LogIn from "./components/LogIn/LogIn/LogIn";
 import AddAdmin from "./components/Admin/AddAdmin/AddAdmin";
 import AddService from "./components/Admin/AddService/AddService";
+import ManageService from "./components/Admin/ManageService/ManageService";
 export const UserContext = createContext();
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
           </Route>
           <Route path="/addService">
             <AddService></AddService>
+          </Route>
+          <Route path="/manageService">
+            <ManageService></ManageService>
           </Route>
         </Switch>
       </Router>
