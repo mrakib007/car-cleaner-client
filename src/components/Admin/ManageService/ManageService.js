@@ -15,7 +15,14 @@ const ManageService = () => {
     },[services]);
 
     const deleteService = (_id) =>{
-
+        fetch(`http://localhost:5000/delete/${_id}`,{
+            method: 'DELETE',
+        })
+        .then((res)=> res.json())
+        .then((data)=> {
+            alert('Data Deleted Successfully!')
+        })
+        .catch((err) => console.log(err))
     }
     return (
         <div>
