@@ -15,7 +15,7 @@ const ServiceDetail = (props) => {
           <Card.Text>
             {service}
           </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Book Service</Button>
         </Card.Body>
       </Card>
     </div>

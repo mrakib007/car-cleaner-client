@@ -11,6 +11,7 @@ import LogIn from "./components/LogIn/LogIn/LogIn";
 import AddAdmin from "./components/Admin/AddAdmin/AddAdmin";
 import AddService from "./components/Admin/AddService/AddService";
 import ManageService from "./components/Admin/ManageService/ManageService";
+import Book from "./components/Customer/Book/Book";
 export const UserContext = createContext();
 
 function App() {
@@ -30,6 +31,10 @@ function App() {
           <Route path="/dashBoard">
             <DashBoard></DashBoard>
           </Route>
+
+          <Route path="/book/:_id">
+            <Book></Book>
+          </Route>
           <Route path="/bookingList">
             <BookingList></BookingList>
           </Route>
@@ -39,6 +44,7 @@ function App() {
           <Route path="/review">
             <Review></Review>
           </Route>
+
           <Route path="/makeAdmin">
             <AddAdmin></AddAdmin>
           </Route>

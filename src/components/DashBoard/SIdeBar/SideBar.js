@@ -38,15 +38,18 @@ const SideBar = () => {
                     <Link to= '/review'><span>Review</span></Link>
                 </li>
 
-                <li>
+                {/* <li>
                 <Link to= '/orderList'><span>Order List</span></Link>
-                </li>
+                </li> */}
                 </div>
                 )}
                 {isAdmin && (
                     <div>
                 <li>
                     <Link to= '/addService'><span>Add Service</span></Link>
+                </li>
+                <li>
+                    <Link to='/orderList'>Order List</Link>
                 </li>
                 <li>
                     <Link to= '/makeAdmin'><span>Make Admin</span></Link>
