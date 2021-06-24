@@ -29,7 +29,9 @@ const NavBar = () => {
                     Login
                   </Nav.Link>
                 )
+                
               }
+              <span style={{backgroundColor: "goldenRod", padding: 5 ,margin: 5}}>{loggedInUser.name}</span>
           </Nav>
         </Navbar.Collapse>
         </div>
