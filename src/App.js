@@ -14,6 +14,7 @@ import ManageService from "./components/Admin/ManageService/ManageService";
 import Book from "./components/Customer/Book/Book";
 import OrderList from "./components/Admin/OrderList/OrderList";
 import ManageReview from "./components/Admin/ManageReview/ManageReview";
+import PrivateRoute from "./components/LogIn/PrivateRoute/PrivatreRoute";
 export const UserContext = createContext();
 
 function App() {
@@ -30,38 +31,38 @@ function App() {
           <Route path="/login">
             <LogIn></LogIn>
           </Route>
-          <Route path="/dashBoard">
+          <PrivateRoute path="/dashBoard">
             <DashBoard></DashBoard>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/book/:_id">
+          <PrivateRoute path="/book/:_id">
             <Book></Book>
-          </Route>
-          <Route path="/bookingList">
+          </PrivateRoute>
+          <PrivateRoute path="/bookingList">
             <BookingList></BookingList>
-          </Route>
-          <Route path="/serviceBooking">
+          </PrivateRoute>
+          <PrivateRoute path="/serviceBooking">
             <BookService></BookService>
-          </Route>
-          <Route path="/review">
+          </PrivateRoute>
+          <PrivateRoute path="/review">
             <Review></Review>
-          </Route>
-          <Route path="/orderList">
+          </PrivateRoute>
+          <PrivateRoute path="/orderList">
         <OrderList></OrderList>
-          </Route>
+          </PrivateRoute>
 
-          <Route path="/makeAdmin">
+          <PrivateRoute path="/makeAdmin">
             <AddAdmin></AddAdmin>
-          </Route>
-          <Route path="/addService">
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
             <AddService></AddService>
-          </Route>
-          <Route path="/manageService">
+          </PrivateRoute>
+          <PrivateRoute path="/manageService">
             <ManageService></ManageService>
-          </Route>
-          <Route path="/manageReview">
+          </PrivateRoute>
+          <PrivateRoute path="/manageReview">
             <ManageReview></ManageReview>
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>
