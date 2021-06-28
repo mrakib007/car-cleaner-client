@@ -15,8 +15,25 @@ const Review = () => {
     } = useForm();
     
     const onSubmit = (data) =>{
+        const reviewData = {
+            ...loggedInUser,
+            name: data.name,
+            service: data.title,
+            description: data.description,
+            company: data.company 
+        };
 
-    }
+        fetch('http://localhost:5000/addReview',{
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(reviewData)
+        }).
+        then((res)=>{
+            alert('Thanks For Your Review!');
+        });
+    };
     return (
         <div>
             <div className="container-fluid">

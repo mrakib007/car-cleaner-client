@@ -13,6 +13,7 @@ import AddService from "./components/Admin/AddService/AddService";
 import ManageService from "./components/Admin/ManageService/ManageService";
 import Book from "./components/Customer/Book/Book";
 import OrderList from "./components/Admin/OrderList/OrderList";
+import ManageReview from "./components/Admin/ManageReview/ManageReview";
 export const UserContext = createContext();
 
 function App() {
@@ -58,7 +59,9 @@ function App() {
           <Route path="/manageService">
             <ManageService></ManageService>
           </Route>
-
+          <Route path="/manageReview">
+            <ManageReview></ManageReview>
+          </Route>
         </Switch>
       </Router>
     </UserContext.Provider>

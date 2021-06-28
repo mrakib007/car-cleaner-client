@@ -57,6 +57,10 @@ const SideBar = () => {
                 <li>
                 <Link to= '/manageService'><span>Manage Service</span></Link>
                 </li>
+
+                <li>
+                <Link to= '/manageReview'><span>Manage Service</span></Link>
+                </li>
                 </div>
             )}
             </ul>
