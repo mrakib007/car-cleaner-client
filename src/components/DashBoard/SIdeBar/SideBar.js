@@ -59,7 +59,7 @@ const SideBar = () => {
                 </li>
 
                 <li>
-                <Link to= '/manageReview'><span>Manage Service</span></Link>
+                <Link to= '/manageReview'><span>Manage Review</span></Link>
                 </li>
                 </div>
             )}
