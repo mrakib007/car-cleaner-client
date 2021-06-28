@@ -65,15 +65,8 @@ const OrderList = () => {
                                                 <td>{list.title}</td>
                                                 <td>Stripe</td>
                                                 <td>
-                                                {/* <form as='select' onChange={(event)=> 
-                                                handleChange(list._id,event)}
-                                                className="form-group">
-                                                    <option>{list.status}</option>
-                                                    <option>Pending</option>
-                                                    <option>Working</option>
-                                                    <option>Ready to Deliver</option>
-                                                </form> */}
-                                                      <Form.Group>
+                                         
+                                                    <Form.Group>
                                                     <Form.Control
                                                         as="select"
                                                         onChange={(event) =>
