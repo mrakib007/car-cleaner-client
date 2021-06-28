@@ -1,35 +1,30 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import './Review.css';
 import ReviewData from '../ReviewData/ReviewData';
 
-const reviewData=[
-    {
-        quote : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, neque.',
-        Name : 'Rakib Hasan',
-        from : 'California',
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, neque.',
-        Name : 'Sakib Hasan',
-        from : 'California',
-    },
-    {
-        quote : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, neque.',
-        Name : 'Akib Hasan',
-        from : 'California',
-    }
-]
+  
 const Review = () => {
+    const [reviews,setReviews] = useState([]);
+    useEffect(()=>{
+        fetch('http://localhost:5000/reviews')
+        .then((res)=> res.json())
+        .then((data)=> setReviews(data));
+    },[])
     return (
-        <div className="my-5 py-5">
-            <div className="container">
-                <h3 className="text-center">Reviews Of Our Clients</h3>
+        <section className="testimonials my-5 py-5">
+        <div className="container">
+            <div className="section-header text-center">
+                <h3 className="">Reviews Of Our Clients</h3>
             </div>
-            {/* <div className="mt-5 row">
-                {
-                    reviewData.map(review => <ReviewData review = {review} key = {review.name}></ReviewData>)
-                }
-            </div> */}
+            <div className="card-deck mt-5">
+                {reviews.map((review) => (
+                    <ReviewData review={review} />
+                ))}
+            </div>
         </div>
+    </section>
     );
 };
 
