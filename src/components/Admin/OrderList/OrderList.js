@@ -8,7 +8,7 @@ const OrderList = () => {
     const [orderList, setOrderList] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/servicesOrder')
+        fetch('https://radiant-gorge-97341.herokuapp.com/servicesOrder')
         .then((res)=> res.json())
         .then((data)=> setOrderList(data));
     },[]);
@@ -18,7 +18,7 @@ const OrderList = () => {
             status: event.target.value,
             _id
         };
-        fetch(`http://localhost:5000/update/${_id}`,{
+        fetch(`https://radiant-gorge-97341.herokuapp.com/update/${_id}`,{
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(updateStatus)

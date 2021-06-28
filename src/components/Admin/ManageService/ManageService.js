@@ -8,14 +8,14 @@ const ManageService = () => {
     const [services , setServices] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://radiant-gorge-97341.herokuapp.com/services')
         .then((res)=> res.json())
         .then((data)=>setServices(data))
         .catch((err)=> console.log(err));
     },[services]);
 
     const deleteService = (_id) =>{
-        fetch(`http://localhost:5000/delete/${_id}`,{
+        fetch(`https://radiant-gorge-97341.herokuapp.com/delete/${_id}`,{
             method: 'DELETE',
         })
         .then((res)=> res.json())

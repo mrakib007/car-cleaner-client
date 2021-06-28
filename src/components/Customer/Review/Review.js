@@ -23,7 +23,7 @@ const Review = () => {
             company: data.company 
         };
 
-        fetch('http://localhost:5000/addReview',{
+        fetch('https://radiant-gorge-97341.herokuapp.com/addReview',{
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

@@ -14,7 +14,7 @@ const Book = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${_id}`)
+        fetch(`https://radiant-gorge-97341.herokuapp.com/service/${_id}`)
             .then((res) => res.json())
             .then((data) => setBooking(data));
     }, [_id]);
@@ -44,7 +44,7 @@ const Book = () => {
             date: new Date(),
         };
 
-        fetch('http://localhost:5000/addServicesOrder', {
+        fetch('https://radiant-gorge-97341.herokuapp.com/addServicesOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(servicesDetails),

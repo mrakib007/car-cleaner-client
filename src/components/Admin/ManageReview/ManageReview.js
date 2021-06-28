@@ -8,13 +8,13 @@ const ManageReview = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://radiant-gorge-97341.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data))
       .catch((err) => console.log(err));
   }, []);
   const deleteReview = (_id) => {
-    fetch(`http://localhost:5000/deleteReview/${_id}`, {
+    fetch(`https://radiant-gorge-97341.herokuapp.com/deleteReview/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

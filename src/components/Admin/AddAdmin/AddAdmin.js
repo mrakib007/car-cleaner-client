@@ -13,7 +13,7 @@ const AddAdmin = () => {
       email: data.email,
       name: data.name,
     };
-    fetch("http://localhost:5000/addAdmin",{
+    fetch("https://radiant-gorge-97341.herokuapp.com/addAdmin",{
       method : 'POST',
       headers: {
         'Content-type': 'application/json',

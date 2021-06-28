@@ -11,7 +11,7 @@ const BookingList = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/servicesByEmail?email=${loggedInUser.email}`)
+    fetch(`https://radiant-gorge-97341.herokuapp.com/servicesByEmail?email=${loggedInUser.email}`)
       .then((res) => res.json())
       .then((data) => setServices(data))
       .catch((err) => console.log(err));

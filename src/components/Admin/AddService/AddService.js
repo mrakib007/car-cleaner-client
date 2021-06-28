@@ -34,7 +34,7 @@ const AddService = () => {
       amount: data.pay
     };
 
-    const url = 'http://localhost:5000/addService';
+    const url = 'https://radiant-gorge-97341.herokuapp.com/addService';
 
     fetch(url,{
       method: 'POST',
